@@ -7,17 +7,17 @@ const Navbar = () => {
 			<HStack h="16" align="center" justify={"center"} pl="30vw">
 				<Image alt="oops no image" src=""></Image>
 				<NextLink href="/" passHref>
-					<Button as="a" aria-label="About" variant={"ghost"}>
+					<Button as="a" aria-label="about" variant={"ghost"}>
 						About
 					</Button>
 				</NextLink>
-				<NextLink href="/Open-Source" passHref>
-					<Button as="a" aria-label="Open-Source" variant={"ghost"}>
+				<NextLink href="/opensource" passHref>
+					<Button as="a" aria-label="opensource" variant={"ghost"}>
 						Open Source
 					</Button>
 				</NextLink>
-				<NextLink href="/Projects" passHref>
-					<Button as="a" aria-label="Projects" variant={"ghost"}>
+				<NextLink href="/projects" passHref>
+					<Button as="a" aria-label="projects" variant={"ghost"}>
 						Projects
 					</Button>
 				</NextLink>
