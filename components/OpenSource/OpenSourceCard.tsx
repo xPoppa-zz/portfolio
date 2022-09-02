@@ -1,6 +1,8 @@
 import { HStack, Text, VStack } from "@chakra-ui/react";
 
-const OpenSourceCard = () => {
+interface Props {}
+
+const OpenSourceCard = (props: Props) => {
 	return (
 		<VStack>
 			<HStack></HStack>
