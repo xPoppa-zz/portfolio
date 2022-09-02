@@ -1,7 +1,12 @@
-import { Flex } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
+import Navbar from "../About/Navbar";
 
 const HeroContainerOpenSource = () => {
-	return <Flex></Flex>;
+	return (
+		<VStack>
+			<Navbar />
+		</VStack>
+	);
 };
 
 export default HeroContainerOpenSource;

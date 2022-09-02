@@ -3,7 +3,7 @@ import NextLink from "next/link";
 
 const Navbar = () => {
 	return (
-		<Flex as="header" bg="whitesmoke" w="100vw">
+		<Flex as="header" bg="transparent" w="100vw">
 			<HStack h="16" align="center" justify={"center"} pl="30vw">
 				<Image alt="oops no image" src=""></Image>
 				<NextLink href="/" passHref>

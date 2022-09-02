@@ -1,7 +1,14 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 
 const SkillsCard = () => {
-	return <Flex></Flex>;
+	return (
+		<VStack>
+			<Heading>Skills</Heading>
+			<Box>
+				<Text>Javascript, TypeScript, React, Redux, Python</Text>
+			</Box>
+		</VStack>
+	);
 };
 
 export default SkillsCard;
