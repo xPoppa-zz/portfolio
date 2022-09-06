@@ -1,11 +1,18 @@
 import { Button, Flex, HStack, Image, Spacer } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { MdDarkMode } from "react-icons/md";
 
 const Navbar = () => {
 	return (
 		<Flex as="header" bg="transparent" w="877px">
 			<HStack h="16" align="center" justify={"center"}>
-				<Image alt="oops no image" src=""></Image>
+				<Image
+					alt="oops no image"
+					src="Me.svg"
+					w="65px"
+					h="65px"
+					borderRadius={"500px"}
+				></Image>
 				<NextLink href="/" passHref>
 					<Button
 						as="a"
@@ -41,8 +48,8 @@ const Navbar = () => {
 				</NextLink>
 			</HStack>
 			<Spacer />
-			<Button fontSize="16px" fontWeight={100}>
-				Dark mode
+			<Button borderRadius={"500px"}>
+				<MdDarkMode />
 			</Button>
 		</Flex>
 	);

@@ -1,13 +1,86 @@
-import { HStack, Text, VStack } from "@chakra-ui/react";
-
-interface Props {}
+import {
+	Box,
+	Heading,
+	HStack,
+	Spacer,
+	Text,
+	Tooltip,
+	VStack,
+} from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { GoMarkGithub, GoStar, GoRepoForked, GoRepo } from "react-icons/go";
+import { useEffect, useState } from "react";
+interface Props {
+	title: string;
+	repoName: string;
+	description: string;
+	techStack: string[];
+	website: string;
+}
 
 const OpenSourceCard = (props: Props) => {
+	const [stars, setStars] = useState(0);
+	const [forks, setForks] = useState(0);
+
+	const techStack = props.techStack.map((tech, idx) => {
+		return (
+			<Text key={idx} fontSize={"12px"} fontWeight="bold">
+				{tech}
+			</Text>
+		);
+	});
+
+	useEffect(() => {
+		const getStarsForks = async () => {
+			const response = await fetch(
+				`https://api.github.com/repos/xPoppa/${props.repoName}` //portfolio is prop
+			);
+			const _data = await response.json();
+			const { stargazers_count, forks } = _data;
+			setStars(stargazers_count);
+			setForks(forks);
+		};
+
+		getStarsForks();
+	}, []);
+
 	return (
-		<VStack>
-			<HStack></HStack>
-			<Text></Text>
-			<HStack></HStack>
+		<VStack
+			align="start"
+			_hover={{ boxShadow: "base", rounded: "md" }}
+			p="6"
+			w={"720px"}
+		>
+			<HStack w="680px">
+				<GoRepo />
+				<Heading>{props.title}</Heading>
+				<Spacer />
+				<Tooltip label="live" fontSize={"sm"} bg="Grey.200">
+					<Box
+						as="a"
+						href={props.website}
+						target="_blank"
+						rel="noopener noreferrer"
+						// https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+					>
+						<ExternalLinkIcon />
+					</Box>
+				</Tooltip>
+
+				<GoMarkGithub />
+			</HStack>
+			<Text>{props.description}</Text>
+			<HStack spacing={1}>
+				{techStack}
+				<GoStar />
+				<Text fontSize={"12px"} fontWeight="bold">
+					{stars}
+				</Text>
+				<GoRepoForked />
+				<Text fontSize={"12px"} fontWeight="bold">
+					{forks}
+				</Text>
+			</HStack>
 		</VStack>
 	);
 };
