@@ -1,11 +1,25 @@
 import { Heading, VStack } from "@chakra-ui/react";
 import CareerCard from "./CareerCard";
+import data from "../../Data/careerData";
 
 const Career = () => {
+	const _CareerCards = data.map((project, idx) => {
+		return (
+			<CareerCard
+				key={idx + 20}
+				company={project.company}
+				jobTitle={project.jobTitle}
+				techStack={project.techStack}
+				date={project.date}
+				picture={project.img}
+			/>
+		);
+	});
+
 	return (
 		<VStack w="50vw" align="start" mt="50px">
 			<Heading mb="20px">Career</Heading>
-			<CareerCard />
+			{_CareerCards}
 		</VStack>
 	);
 };
