@@ -42,6 +42,7 @@ const OpenSourceCard = (props: Props) => {
 		};
 
 		getStarsForks();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
@@ -53,9 +54,9 @@ const OpenSourceCard = (props: Props) => {
 		>
 			<HStack w="680px">
 				<GoRepo />
-				<Heading>{props.title}</Heading>
+				<Heading fontSize="1.5rem">{props.title}</Heading>
 				<Spacer />
-				<Tooltip label="live" fontSize={"sm"} bg="Grey.200">
+				<Tooltip label="click" fontSize={"sm"} bg="Grey.200">
 					<Box
 						as="a"
 						href={props.website}
@@ -69,7 +70,7 @@ const OpenSourceCard = (props: Props) => {
 
 				<GoMarkGithub />
 			</HStack>
-			<Text>{props.description}</Text>
+			<Text fontSize="1rem">{props.description}</Text>
 			<HStack spacing={1}>
 				{techStack}
 				<GoStar />

@@ -20,7 +20,7 @@ const data = [
 	{
 		title: "Meme Generator",
 		repoName: "meme-generator",
-		description: " Meme generator made during the Scrimba Course",
+		description: " Meme generator website",
 		techStack: ["Javascript, React, chakraUI"],
 		website: "https://meme-generator-eta-lime.vercel.app/",
 	},

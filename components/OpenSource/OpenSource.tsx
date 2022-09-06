@@ -21,8 +21,7 @@ const OpenSource = () => {
 		<VStack align="start" spacing="30px">
 			<Heading>Open Source</Heading>
 			<Text>
-				This Page lists some of the opensource repositories I have published or
-				contributed to
+				This Page lists some of the opensource repositories I have published
 			</Text>
 			{repoCards}
 		</VStack>

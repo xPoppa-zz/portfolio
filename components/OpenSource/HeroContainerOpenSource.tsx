@@ -1,5 +1,5 @@
 import { VStack } from "@chakra-ui/react";
-import Navbar from "../About/Navbar";
+import Navbar from "../shared/Navbar";
 import OpenSource from "./OpenSource";
 
 const HeroContainerOpenSource = () => {

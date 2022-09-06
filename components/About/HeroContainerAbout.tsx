@@ -1,7 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 import Career from "./Career";
 import Introduction from "./Introduction";
-import Navbar from "./Navbar";
+import Navbar from "../shared/Navbar";
 import Skills from "./Skills";
 
 const HeroContainerAbout = () => {
