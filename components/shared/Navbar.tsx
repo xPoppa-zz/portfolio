@@ -141,12 +141,12 @@ const Navbar = () => {
 						</Button>
 					</NextLink>
 				</Flex>
-				<Spacer />
 				<IconButton
 					aria-label="colorMode-button"
 					onClick={toggleColorMode}
 					icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
 					{...IconProps}
+					right="0"
 				>
 					<MdDarkMode />
 				</IconButton>
