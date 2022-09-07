@@ -102,7 +102,7 @@ const Navbar = () => {
 				}}
 			/>
 			{/* Mobile Content */}
-			<Flex flexDir="row">
+			<Flex flexDir="row" w="100vw">
 				<Flex
 					w="100vw"
 					display={display}
@@ -141,6 +141,7 @@ const Navbar = () => {
 						</Button>
 					</NextLink>
 				</Flex>
+				<Spacer />
 				<IconButton
 					aria-label="colorMode-button"
 					onClick={toggleColorMode}
