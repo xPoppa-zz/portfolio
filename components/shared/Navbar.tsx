@@ -102,7 +102,7 @@ const Navbar = () => {
 				}}
 			/>
 			{/* Mobile Content */}
-			<Flex flexDir="row" w="100vw">
+			<Flex flexDir="row" w="90vw">
 				<Flex
 					w="100vw"
 					display={display}
