@@ -102,7 +102,7 @@ const Navbar = () => {
 				}}
 			/>
 			{/* Mobile Content */}
-			<Flex flexDir="row" w="90vw">
+			<Flex flexDir="row" w="100vw">
 				<Flex
 					w="100vw"
 					display={display}
@@ -146,7 +146,7 @@ const Navbar = () => {
 					onClick={toggleColorMode}
 					icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
 					{...IconProps}
-					right="0"
+					left="0"
 				>
 					<MdDarkMode />
 				</IconButton>
