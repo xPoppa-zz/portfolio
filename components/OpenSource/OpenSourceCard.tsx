@@ -24,7 +24,7 @@ const OpenSourceCard = (props: Props) => {
 
 	const techStack = props.techStack.map((tech, idx) => {
 		return (
-			<Text key={idx} fontSize={"12px"} fontWeight="bold">
+			<Text key={idx} fontSize={"0.75em"} fontWeight="bold">
 				{tech}
 			</Text>
 		);
@@ -50,9 +50,9 @@ const OpenSourceCard = (props: Props) => {
 			align="start"
 			_hover={{ boxShadow: "base", rounded: "md" }}
 			p="6"
-			w={"720px"}
+			w={{ base: "70vw", lg: "44em" }}
 		>
-			<HStack w="680px">
+			<HStack w={{ base: "70vw", lg: "42em" }}>
 				<GoRepo />
 				<Heading fontSize="1.5rem">{props.title}</Heading>
 				<Spacer />
@@ -74,11 +74,11 @@ const OpenSourceCard = (props: Props) => {
 			<HStack spacing={1}>
 				{techStack}
 				<GoStar />
-				<Text fontSize={"12px"} fontWeight="bold">
+				<Text fontSize={"0.75em"} fontWeight="bold">
 					{stars}
 				</Text>
 				<GoRepoForked />
-				<Text fontSize={"12px"} fontWeight="bold">
+				<Text fontSize={"0.75em"} fontWeight="bold">
 					{forks}
 				</Text>
 			</HStack>

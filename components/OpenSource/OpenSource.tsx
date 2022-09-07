@@ -18,7 +18,7 @@ const OpenSource = () => {
 	});
 
 	return (
-		<VStack align="start" spacing="30px">
+		<VStack align="start" spacing="2em" w={{ base: "70vw", lg: "44em" }}>
 			<Heading>Open Source</Heading>
 			<Text>
 				This Page lists some of the opensource repositories I have published

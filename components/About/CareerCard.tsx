@@ -16,19 +16,19 @@ const CareerCard = (props: Props) => {
 	return (
 		<HStack
 			align="start"
-			w={{ base: "70vw", lg: "700px" }}
+			w={{ base: "70vw", lg: "44em" }}
 			_hover={{ boxShadow: "base", rounded: "md" }}
 		>
 			<Image
 				src={props.picture}
 				alt="oops no image"
-				w="65px"
-				h="65px"
-				borderRadius={"500px"}
+				w="4em"
+				h="4em"
+				borderRadius={"31em"}
 			/>
 			<VStack align="start">
-				<Heading fontSize={"20px"}>{props.company}</Heading>
-				<Text fontSize="16px">{props.jobTitle}</Text>
+				<Heading fontSize={"1.5em"}>{props.company}</Heading>
+				<Text fontSize="1em">{props.jobTitle}</Text>
 				{techStack}
 			</VStack>
 			<Spacer />

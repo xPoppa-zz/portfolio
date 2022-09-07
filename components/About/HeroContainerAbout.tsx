@@ -7,7 +7,7 @@ import CareerFiller from "./CareerFiller";
 
 const HeroContainerAbout = () => {
 	return (
-		<VStack justify={"center"} align={"center"} spacing="50px">
+		<VStack justify={"center"} align={"center"} spacing="3em">
 			<Navbar />
 			<Introduction />
 			<Skills />

@@ -41,14 +41,14 @@ const Navbar = () => {
 						src="Me.svg"
 						w="65px"
 						h="65px"
-						borderRadius={"500px"}
+						borderRadius={"31em"}
 					></Image>
 					<NextLink href="/" passHref>
 						<Button
 							as="a"
 							aria-label="about"
 							variant={"ghost"}
-							fontSize="16px"
+							fontSize="1em"
 							fontWeight={100}
 						>
 							About
@@ -59,7 +59,7 @@ const Navbar = () => {
 							as="a"
 							aria-label="opensource"
 							variant={"ghost"}
-							fontSize="16px"
+							fontSize="1em"
 							fontWeight={100}
 						>
 							Open Source
@@ -78,7 +78,7 @@ const Navbar = () => {
 				</NextLink> */}
 				</HStack>
 				<Spacer />
-				<Button borderRadius={"500px"}>
+				<Button borderRadius={"31em"}>
 					<MdDarkMode />
 				</Button>
 			</Flex>

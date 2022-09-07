@@ -17,7 +17,7 @@ const Career = () => {
 	});
 
 	return (
-		<VStack w={{ base: "70vw", lg: "700px" }} align="start" mt="50px">
+		<VStack w={{ base: "70vw", lg: "44em" }} align="start" mt="3em">
 			<Heading mb="20px">Career</Heading>
 			{_CareerCards}
 		</VStack>

@@ -6,18 +6,18 @@ const CareerFiller = () => {
 		<HStack
 			align="start"
 			justify={"center"}
-			w={{ base: "70vw", lg: "700px" }}
+			w={{ base: "70vw", lg: "44em" }}
 			_hover={{ boxShadow: "base", rounded: "md" }}
 		>
 			<Image
 				src={"Me.svg"}
 				alt="oops no image"
-				w="65px"
-				h="65px"
-				borderRadius={"500px"}
+				w="4em"
+				h="4em"
+				borderRadius={"31em"}
 			/>
 			<VStack align="start" pt="1em">
-				<Text fontSize="16px">
+				<Text fontSize="1em">
 					If you want to see my recent OpenSource projects click{" "}
 					<NextLink href="/opensource" passHref>
 						<Text as="a" fontWeight={"bold"}>

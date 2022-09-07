@@ -4,7 +4,7 @@ import OpenSource from "./OpenSource";
 
 const HeroContainerOpenSource = () => {
 	return (
-		<VStack justify={"center"} spacing="50px">
+		<VStack justify={"center"} spacing="3em">
 			<Navbar />
 			<OpenSource />
 		</VStack>
