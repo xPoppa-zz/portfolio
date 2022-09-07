@@ -52,7 +52,7 @@ const OpenSourceCard = (props: Props) => {
 			p="6"
 			w={{ base: "70vw", lg: "44em" }}
 		>
-			<HStack w={{ base: "70vw", lg: "42em" }}>
+			<HStack w={{ base: "65vw", lg: "42em" }}>
 				<GoRepo />
 				<Heading fontSize="1.5rem">{props.title}</Heading>
 				<Spacer />
