@@ -9,7 +9,12 @@ const breakpoints = {
 	xl: "80em",
 };
 
-const theme = extendTheme({ breakpoints });
+const config = {
+	initialColorMode: "light",
+	useSystemColorMode: false,
+};
+
+const theme = extendTheme({ breakpoints, config });
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (

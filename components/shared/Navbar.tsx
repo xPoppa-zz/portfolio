@@ -5,22 +5,22 @@ import {
 	Image,
 	Spacer,
 	IconButton,
-	VStack,
+	useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 
-// const breakpoints = {
-// 	sm: "320px",
-// 	md: "480px",
-// 	lg: "600px",
-// 	xl: "880px",
-// };
+const IconProps = {
+	variant: "ghost",
+	size: "lg",
+	isRound: true,
+};
 
 const Navbar = () => {
 	const [display, setDisplay] = useState("none");
+	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<Flex>
 			<Flex
@@ -78,9 +78,14 @@ const Navbar = () => {
 				</NextLink> */}
 				</HStack>
 				<Spacer />
-				<Button borderRadius={"31em"}>
+				<IconButton
+					aria-label="colorMode-button"
+					onClick={toggleColorMode}
+					icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
+					{...IconProps}
+				>
 					<MdDarkMode />
-				</Button>
+				</IconButton>
 			</Flex>
 			<IconButton
 				aria-label="Open Menu"
