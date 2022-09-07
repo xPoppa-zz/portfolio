@@ -4,6 +4,7 @@ import Introduction from "./Introduction";
 import Navbar from "../shared/Navbar";
 import Skills from "./Skills";
 import CareerFiller from "./CareerFiller";
+import Footer from "../shared/Footer";
 
 const HeroContainerAbout = () => {
 	return (
@@ -12,6 +13,7 @@ const HeroContainerAbout = () => {
 			<Introduction />
 			<Skills />
 			<CareerFiller />
+			<Footer />
 		</VStack>
 	);
 };
