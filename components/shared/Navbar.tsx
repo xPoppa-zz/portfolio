@@ -141,6 +141,14 @@ const Navbar = () => {
 						Open Source
 					</Button>
 				</NextLink>
+				<IconButton
+					aria-label="colorMode-button"
+					onClick={toggleColorMode}
+					icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
+					{...IconProps}
+				>
+					<MdDarkMode />
+				</IconButton>
 			</Flex>
 		</Flex>
 	);
