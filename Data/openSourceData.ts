@@ -5,7 +5,7 @@ const data = [
 		description:
 			"My personal portfolio to show my skills, projects and experiences",
 		techStack: ["Nextjs", "chakraUI", "Typescript"],
-		website: "https://github.com/xPoppa/portfolio",
+		website: "https://portfolio-orcin-five-36.vercel.app/opensource",
 	},
 
 	{
