@@ -1,9 +1,15 @@
-import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Heading, Text, VStack } from "@chakra-ui/react";
 
 const Introduction = () => {
 	return (
-		<VStack align="start" w="720px">
-			<Heading>{"Hi, I'm Romano "}</Heading>
+		// const breakpoints = {
+		// 	sm: "320px",
+		// 	md: "480px",
+		// 	lg: "600px",
+		// 	xl: "880px",
+		// };
+		<VStack align="start" w={{ base: "70vw", lg: "700px" }}>
+			<Heading>{"Hi, I'm Romano"}</Heading>
 			<Text>
 				I am a Front end Developer, an blockchain enthousiast and a tutor from
 				the Netherlands

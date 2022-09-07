@@ -2,11 +2,11 @@ import { Heading, Text, VStack } from "@chakra-ui/react";
 
 const Skills = () => {
 	return (
-		<VStack align="start" w="720px">
+		<VStack align="start" w={{ base: "70vw", lg: "700px" }}>
 			<Heading>Skills</Heading>
 			<VStack
 				align="start"
-				w="720px"
+				w={{ base: "70vw", lg: "700px" }}
 				_hover={{ boxShadow: "base", rounded: "md" }}
 				borderLeft="2px"
 				borderLeftColor={"blue.400"}

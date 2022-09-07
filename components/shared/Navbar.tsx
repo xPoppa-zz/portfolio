@@ -1,18 +1,119 @@
-import { Button, Flex, HStack, Image, Spacer } from "@chakra-ui/react";
+import {
+	Button,
+	Flex,
+	HStack,
+	Image,
+	Spacer,
+	IconButton,
+	VStack,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { MdDarkMode } from "react-icons/md";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { useState } from "react";
+
+// const breakpoints = {
+// 	sm: "320px",
+// 	md: "480px",
+// 	lg: "600px",
+// 	xl: "880px",
+// };
 
 const Navbar = () => {
+	const [display, setDisplay] = useState("none");
 	return (
-		<Flex as="header" bg="transparent" w="877px">
-			<HStack h="16" align="center" justify={"center"}>
-				<Image
-					alt="oops no image"
-					src="Me.svg"
-					w="65px"
-					h="65px"
-					borderRadius={"500px"}
-				></Image>
+		<Flex>
+			<Flex
+				as="header"
+				bg="transparent"
+				w={{ base: "99vw", lg: "55em", xl: "55em" }}
+				display={{
+					base: "none",
+					sm: "flex",
+					md: "flex",
+					lg: "flex",
+					xl: "flex",
+				}}
+			>
+				<HStack h="16" align="center" justify={"center"}>
+					<Image
+						alt="oops no image"
+						src="Me.svg"
+						w="65px"
+						h="65px"
+						borderRadius={"500px"}
+					></Image>
+					<NextLink href="/" passHref>
+						<Button
+							as="a"
+							aria-label="about"
+							variant={"ghost"}
+							fontSize="16px"
+							fontWeight={100}
+						>
+							About
+						</Button>
+					</NextLink>
+					<NextLink href="/opensource" passHref>
+						<Button
+							as="a"
+							aria-label="opensource"
+							variant={"ghost"}
+							fontSize="16px"
+							fontWeight={100}
+						>
+							Open Source
+						</Button>
+					</NextLink>
+					{/* <NextLink href="/projects" passHref>
+					<Button
+						as="a"
+						aria-label="projects"
+						variant={"ghost"}
+						fontSize="16px"
+						fontWeight={100}
+					>
+						Projects
+					</Button>
+				</NextLink> */}
+				</HStack>
+				<Spacer />
+				<Button borderRadius={"500px"}>
+					<MdDarkMode />
+				</Button>
+			</Flex>
+			<IconButton
+				aria-label="Open Menu"
+				size="lg"
+				mr={2}
+				icon={<HamburgerIcon />}
+				onClick={() => setDisplay("flex")}
+				display={{
+					base: "flex",
+					sm: "none",
+					md: "none",
+					lg: "none",
+					xl: "none",
+				}}
+			/>
+			{/* Mobile Content */}
+			<Flex
+				w="100vw"
+				display={display}
+				h="100vh"
+				top="0"
+				left="0"
+				overflowY="auto"
+				flexDir="column"
+			>
+				<IconButton
+					mt={2}
+					mr={2}
+					aria-label="Open Menu"
+					size="lg"
+					icon={<CloseIcon />}
+					onClick={() => setDisplay("none")}
+				/>
 				<NextLink href="/" passHref>
 					<Button
 						as="a"
@@ -35,22 +136,7 @@ const Navbar = () => {
 						Open Source
 					</Button>
 				</NextLink>
-				<NextLink href="/projects" passHref>
-					<Button
-						as="a"
-						aria-label="projects"
-						variant={"ghost"}
-						fontSize="16px"
-						fontWeight={100}
-					>
-						Projects
-					</Button>
-				</NextLink>
-			</HStack>
-			<Spacer />
-			<Button borderRadius={"500px"}>
-				<MdDarkMode />
-			</Button>
+			</Flex>
 		</Flex>
 	);
 };

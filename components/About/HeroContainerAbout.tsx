@@ -3,14 +3,15 @@ import Career from "./Career";
 import Introduction from "./Introduction";
 import Navbar from "../shared/Navbar";
 import Skills from "./Skills";
+import CareerFiller from "./CareerFiller";
 
 const HeroContainerAbout = () => {
 	return (
-		<VStack justify={"center"} spacing="50px">
+		<VStack justify={"center"} align={"center"} spacing="50px">
 			<Navbar />
 			<Introduction />
 			<Skills />
-			<Career />
+			<CareerFiller />
 		</VStack>
 	);
 };
