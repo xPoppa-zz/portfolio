@@ -102,54 +102,52 @@ const Navbar = () => {
 				}}
 			/>
 			{/* Mobile Content */}
-			<Flex flexDir="row" w="100vw" align="center">
-				<Flex
-					w="100vw"
-					display={display}
-					h="100vh"
-					overflowY="auto"
-					flexDir="column"
-				>
-					<IconButton
-						mt={2}
-						mr={2}
-						aria-label="Open Menu"
-						size="lg"
-						icon={<CloseIcon />}
-						onClick={() => setDisplay("none")}
-					/>
-					<NextLink href="/" passHref>
-						<Button
-							as="a"
-							aria-label="about"
-							variant={"ghost"}
-							fontSize="16px"
-							fontWeight={100}
-						>
-							About
-						</Button>
-					</NextLink>
-					<NextLink href="/opensource" passHref>
-						<Button
-							as="a"
-							aria-label="opensource"
-							variant={"ghost"}
-							fontSize="16px"
-							fontWeight={100}
-						>
-							Open Source
-						</Button>
-					</NextLink>{" "}
-					<IconButton
-						aria-label="colorMode-button"
-						onClick={toggleColorMode}
-						icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
-						{...IconProps}
-						right="0"
-						top="0"
-						position="absolute"
-					></IconButton>
-				</Flex>
+			<Flex
+				w="100vw"
+				display={display}
+				h="100vh"
+				overflowY="auto"
+				flexDir="column"
+			>
+				<IconButton
+					mt={2}
+					mr={2}
+					aria-label="Open Menu"
+					size="lg"
+					icon={<CloseIcon />}
+					onClick={() => setDisplay("none")}
+				/>
+				<NextLink href="/" passHref>
+					<Button
+						as="a"
+						aria-label="about"
+						variant={"ghost"}
+						fontSize="16px"
+						fontWeight={100}
+					>
+						About
+					</Button>
+				</NextLink>
+				<NextLink href="/opensource" passHref>
+					<Button
+						as="a"
+						aria-label="opensource"
+						variant={"ghost"}
+						fontSize="16px"
+						fontWeight={100}
+					>
+						Open Source
+					</Button>
+				</NextLink>{" "}
+				<IconButton
+					aria-label="colorMode-button"
+					onClick={toggleColorMode}
+					icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
+					{...IconProps}
+					right="0"
+					top="0"
+					position="absolute"
+				></IconButton>
 			</Flex>
 		</Flex>
 	);
