@@ -102,45 +102,45 @@ const Navbar = () => {
 				}}
 			/>
 			{/* Mobile Content */}
-			<Flex
-				w="100vw"
-				display={display}
-				h="100vh"
-				top="0"
-				left="0"
-				overflowY="auto"
-				flexDir="column"
-			>
-				<IconButton
-					mt={2}
-					mr={2}
-					aria-label="Open Menu"
-					size="lg"
-					icon={<CloseIcon />}
-					onClick={() => setDisplay("none")}
-				/>
-				<NextLink href="/" passHref>
-					<Button
-						as="a"
-						aria-label="about"
-						variant={"ghost"}
-						fontSize="16px"
-						fontWeight={100}
-					>
-						About
-					</Button>
-				</NextLink>
-				<NextLink href="/opensource" passHref>
-					<Button
-						as="a"
-						aria-label="opensource"
-						variant={"ghost"}
-						fontSize="16px"
-						fontWeight={100}
-					>
-						Open Source
-					</Button>
-				</NextLink>
+			<Flex flexDir="row">
+				<Flex
+					w="100vw"
+					display={display}
+					h="100vh"
+					overflowY="auto"
+					flexDir="column"
+				>
+					<IconButton
+						mt={2}
+						mr={2}
+						aria-label="Open Menu"
+						size="lg"
+						icon={<CloseIcon />}
+						onClick={() => setDisplay("none")}
+					/>
+					<NextLink href="/" passHref>
+						<Button
+							as="a"
+							aria-label="about"
+							variant={"ghost"}
+							fontSize="16px"
+							fontWeight={100}
+						>
+							About
+						</Button>
+					</NextLink>
+					<NextLink href="/opensource" passHref>
+						<Button
+							as="a"
+							aria-label="opensource"
+							variant={"ghost"}
+							fontSize="16px"
+							fontWeight={100}
+						>
+							Open Source
+						</Button>
+					</NextLink>
+				</Flex>
 				<IconButton
 					aria-label="colorMode-button"
 					onClick={toggleColorMode}
