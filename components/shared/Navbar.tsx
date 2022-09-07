@@ -146,7 +146,9 @@ const Navbar = () => {
 					onClick={toggleColorMode}
 					icon={colorMode === "light" ? <MdDarkMode /> : <MdLightMode />}
 					{...IconProps}
-					left="0"
+					right="0"
+					top="0"
+					position="absolute"
 				>
 					<MdDarkMode />
 				</IconButton>
